@@ -1,538 +1,123 @@
-# \# Sales Performance \& Business Intelligence
+# Sales Performance & Business Intelligence
 
-# 
+## Project Overview
 
-# \## Project Overview
+An end-to-end **Sales Performance and Business Intelligence** project built using **Microsoft Power BI, Power Query, DAX, and data modeling**.
 
-# 
+The project transforms raw sales transaction data into an interactive dashboard to analyze sales performance, profitability, customer segments, products, regions, sales channels, and business trends.
 
-# This project analyzes sales transaction data to understand sales performance, profitability, customer behavior, product performance, regional performance, and sales channels.
+## Dashboard Preview
 
-# 
+![Sales Performance Dashboard](Dashboard.png)
 
-# An interactive Power BI dashboard was developed to transform raw sales data into meaningful business insights and support data-driven decision-making.
+## Data Model
 
-# 
+The Power BI data model follows a **star-schema approach**, with the Orders table as the main fact table and Customers, Products, Regions, and Date as supporting dimension tables.
 
-# The project follows an end-to-end Business Intelligence workflow using \*\*Power Query, data cleaning, data transformation, data modeling, DAX, KPI development, data visualization, and Power BI dashboard development\*\*.
+![Power BI Data Model](Model_view.png)
 
-# 
+## Business Objectives
 
-# \---
+- Monitor overall sales and profitability
+- Analyze sales trends over time
+- Identify high-performing product categories
+- Compare regional sales performance
+- Analyze customer segment contribution
+- Compare sales channels
+- Track key business KPIs
 
-# 
+## Dataset
 
-# \## Business Problem
+The project uses an Excel-based sales dataset containing:
 
-# 
+- **Orders** — transaction-level sales data
+- **Customers** — customer information and segments
+- **Products** — product and category details
+- **Regions** — regional information
+- **Date** — calendar and time-intelligence data
 
-# A business has a large volume of sales transaction data but needs an interactive way to monitor sales performance, profitability, customers, products, regions, and sales channels.
+## Tools & Technologies
 
-# 
+- Microsoft Power BI
+- Power Query
+- DAX
+- Data Modeling
+- Microsoft Excel
+- Data Analysis
+- Business Intelligence
+- Data Visualization
 
-# The objectives of this analysis are to:
+## Project Workflow
 
-# 
+**Raw Data → Power Query → Data Cleaning & Transformation → Data Modeling → DAX → KPI Development → Dashboard → Business Insights**
 
-# \* Monitor total sales and profit
+### Power Query
 
-# \* Analyze profit margin and order performance
+Performed data cleaning and transformation including:
 
-# \* Identify sales trends over time
+- Data type validation
+- Handling missing values
+- Duplicate validation
+- Data preparation for modeling
 
-# \* Compare product category performance
+### Data Modeling
 
-# \* Analyze regional sales performance
+Built a relational **star-schema data model** using:
 
-# \* Understand customer segment performance
+- Fact table: Orders
+- Dimension tables: Customers, Products, Regions, Date
+- One-to-many relationships
+- Date table for time-intelligence analysis
 
-# \* Compare sales channels
+### DAX & KPIs
 
-# \* Monitor year-over-year sales and profit growth
+Created measures for:
 
-# \* Provide an interactive dashboard for business analysis
+- Total Sales
+- Total Profit
+- Profit Margin
+- Total Orders
+- Total Customers
+- Average Order Value
+- Sales YTD
+- Profit YTD
+- Sales Growth
+- Profit Growth
+- Return & Cancellation Rate
 
-# 
+## Dashboard Features
 
-# \---
+The interactive Power BI dashboard includes:
 
-# 
+- KPI cards
+- Sales trend analysis
+- Sales by product category
+- Sales by region
+- Sales by customer segment
+- Sales by sales channel
+- Year, Region, Category, and Sales Channel filters
 
-# \## Dataset
+## Key Business Insights
 
-# 
+The dashboard enables analysis of:
 
-# The project uses a sales transaction dataset containing \*\*5,000 orders\*\* along with supporting customer, product, region, and date information.
+- Sales and profitability trends
+- Product category performance
+- Regional sales contribution
+- Customer segment performance
+- Sales channel performance
+- Year-over-year business growth
 
-# 
+## Project Files
 
-# The dataset is organized into the following tables:
+| File | Description |
+|---|---|
+| `Dashboard.png` | Power BI dashboard screenshot |
+| `Model_view.png` | Power BI data model screenshot |
+| `Sales_Performance_BI_Dataset.xlsx` | Project dataset |
+| `business_analytics.pbix` | Power BI project file |
+| `README.md` | Project documentation |
 
-# 
+## Project Purpose
 
-# \### Orders
-
-# 
-
-# Contains transaction-level sales information, including:
-
-# 
-
-# \* Order ID
-
-# \* Order Date
-
-# \* Customer ID
-
-# \* Product ID
-
-# \* Quantity
-
-# \* Discount
-
-# \* Sales
-
-# \* Cost
-
-# \* Profit
-
-# \* Shipping Cost
-
-# \* Sales Channel
-
-# \* Payment Method
-
-# \* Order Status
-
-# 
-
-# \### Customers
-
-# 
-
-# Contains customer information including:
-
-# 
-
-# \* Customer ID
-
-# \* Customer Name
-
-# \* Segment
-
-# \* City
-
-# \* State
-
-# 
-
-# \### Products
-
-# 
-
-# Contains product information including:
-
-# 
-
-# \* Product ID
-
-# \* Product Name
-
-# \* Category
-
-# \* Sub-Category
-
-# \* Base Price
-
-# 
-
-# \### Regions
-
-# 
-
-# Contains regional information including:
-
-# 
-
-# \* Region
-
-# \* City
-
-# \* Zone
-
-# 
-
-# \### Date
-
-# 
-
-# A dedicated date table used for time-based analysis and DAX time intelligence.
-
-# 
-
-# \---
-
-# 
-
-# \## Tools \& Technologies
-
-# 
-
-# \* Microsoft Power BI
-
-# \* Power Query
-
-# \* DAX
-
-# \* Data Modeling
-
-# \* Data Cleaning
-
-# \* Data Transformation
-
-# \* KPI Development
-
-# \* Data Visualization
-
-# \* Dashboard Development
-
-# \* Microsoft Excel
-
-# 
-
-# \---
-
-# 
-
-# \## Project Workflow
-
-# 
-
-# \### 1. Data Loading
-
-# 
-
-# The sales dataset was loaded into Power BI from Excel.
-
-# 
-
-# Multiple related tables were imported for orders, customers, products, regions, and dates.
-
-# 
-
-# \---
-
-# 
-
-# \### 2. Data Cleaning \& Transformation — Power Query
-
-# 
-
-# The data was prepared using Power Query.
-
-# 
-
-# Data preparation included:
-
-# 
-
-# \* Setting appropriate data types
-
-# \* Handling missing values
-
-# \* Replacing missing payment methods with `Unknown`
-
-# \* Replacing missing shipping costs with `0`
-
-# \* Checking duplicate transaction records
-
-# \* Validating customer and product identifiers
-
-# \* Preparing date fields for time-based analysis
-
-# 
-
-# \---
-
-# 
-
-# \### 3. Data Modeling
-
-# 
-
-# A relational data model was created in Power BI using a star-schema approach.
-
-# 
-
-# The model includes:
-
-# 
-
-# \* Orders as the main fact table
-
-# \* Customers as a customer dimension
-
-# \* Products as a product dimension
-
-# \* Regions as a regional dimension
-
-# \* Date as a date dimension
-
-# 
-
-# Relationships were created between the fact and dimension tables to support interactive analysis.
-
-# 
-
-# \---
-
-# 
-
-# \### 4. DAX \& KPI Development
-
-# 
-
-# DAX measures were created to calculate important business KPIs, including:
-
-# 
-
-# \* Total Sales
-
-# \* Total Profit
-
-# \* Profit Margin
-
-# \* Total Orders
-
-# \* Total Customers
-
-# \* Total Quantity
-
-# \* Average Order Value
-
-# \* Sales YTD
-
-# \* Sales LY
-
-# \* Sales Growth %
-
-# \* Profit YTD
-
-# \* Profit LY
-
-# \* Profit Growth %
-
-# \* Returned Orders
-
-# \* Cancelled Orders
-
-# \* Return \& Cancel Rate
-
-# \* Completed Order Rate
-
-# \* Average Discount
-
-# \* Sales per Customer
-
-# 
-
-# These measures support business performance analysis and time-based comparisons.
-
-# 
-
-# \---
-
-# 
-
-# \## Power BI Dashboard
-
-# 
-
-# The Power BI dashboard provides an interactive view of overall sales and business performance.
-
-# 
-
-# \### Key Performance Indicators
-
-# 
-
-# \* Total Sales
-
-# \* Total Profit
-
-# \* Profit Margin
-
-# \* Total Orders
-
-# 
-
-# \### Dashboard Visualizations
-
-# 
-
-# \* Sales Trend Over Time
-
-# \* Sales by Product Category
-
-# \* Sales by Region
-
-# \* Sales by Customer Segment
-
-# \* Sales by Sales Channel
-
-# 
-
-# \### Interactive Filters
-
-# 
-
-# \* Year
-
-# \* Region
-
-# \* Category
-
-# \* Sales Channel
-
-# 
-
-# The dashboard uses \*\*DAX measures, data modeling, KPIs, slicers, data visualization, and interactive filtering\*\* to support business analysis.
-
-# 
-
-# \---
-
-# 
-
-# \## Dashboard Preview
-
-# 
-
-# !\[Sales Performance Dashboard](Dashboard.png)
-
-# 
-
-# \---
-
-# 
-
-# \## Data Model
-
-# 
-
-# The Power BI data model follows a \*\*star-schema approach\*\*, with the Orders table as the main fact table and Customers, Products, Regions, and Date as supporting dimension tables.
-
-# 
-
-# !\[Power BI Data Model](Model\_view.png)
-
-# 
-
-# \---
-
-# 
-
-# \## Key Business Insights
-
-# 
-
-# The dashboard is designed to help management:
-
-# 
-
-# \* Monitor overall sales and profitability
-
-# \* Track sales trends over time
-
-# \* Compare product category performance
-
-# \* Identify regional sales differences
-
-# \* Understand customer segment contribution
-
-# \* Compare sales performance across channels
-
-# \* Monitor sales and profit growth
-
-# \* Identify areas requiring further business investigation
-
-# 
-
-# \---
-
-# 
-
-# \## Conclusion
-
-# 
-
-# This project demonstrates an end-to-end \*\*Business Intelligence and Power BI workflow\*\*:
-
-# 
-
-# \*\*Raw Data → Power Query → Data Cleaning \& Transformation → Data Modeling → DAX \& KPIs → Interactive Dashboard → Business Insights\*\*
-
-# 
-
-# The project demonstrates practical skills in:
-
-# 
-
-# \* Power BI
-
-# \* Power Query
-
-# \* DAX
-
-# \* Data Modeling
-
-# \* Data Cleaning
-
-# \* Data Transformation
-
-# \* KPI Development
-
-# \* Data Visualization
-
-# \* Dashboard Development
-
-# \* Business Intelligence
-
-# \* Business Analysis
-
-# 
-
-# \---
-
-# 
-
-# \## Project Files
-
-# 
-
-# | File | Description |
-
-# |---|---|
-
-# | `Sales\_Performance\_BI\_Dataset.xlsx` | Sales dataset and supporting tables |
-
-# | `Sales\_Performance\_BI.pbix` | Power BI dashboard |
-
-# | `Dashboard.png` | Power BI dashboard preview |
-
-# | `Model\_view.png` | Power BI data model view |
-
-# | `README.md` | Project documentation |
-
-# 
-
-# \---
-
-# 
-
-# \## Project Purpose
-
-# 
-
-# This project was created for educational and portfolio purposes to demonstrate practical \*\*Business Intelligence, Power BI, DAX, data modeling, and data analysis skills\*\*.
-
+This project demonstrates practical skills in **data cleaning, Power Query, data modeling, DAX, KPI development, data visualization, and Business Intelligence dashboard development** using Power BI.
